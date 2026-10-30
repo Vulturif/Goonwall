@@ -8,6 +8,25 @@ playlists that pick up where they stopped.
 The decoders come with it, so there's nothing else to install and no codec
 pack to hunt down.
 
+> ⚠️ **18+ only.** Goonwall plays whatever is in your folders, but the
+> websites it can search and play from are adult sites.
+
+---
+
+## What's in the download
+
+Goonwall comes in three pieces. Only the first one is required.
+
+| | What it is | Do you need it? |
+|---|---|---|
+| **`Goonwall.exe`** | The player itself — folders, websites, the grid, everything this page describes. | **Yes.** On its own it does everything except the browser button. |
+| **`GoonwallHost.exe`** | A small helper that your browser starts when you click **Add to Goonwall**. It drops the page's address where Goonwall picks it up — which is why that works even while Goonwall is closed. You never start it yourself and it has no window. | Only for the browser plugin. Keep it **in the same folder as `Goonwall.exe`**, that's where Goonwall looks for it. |
+| **The browser plugin** (`Goonwall-extension.zip`, or the `extension` folder) | A Chrome/Edge extension that puts a **GW** button on the seven searchable sites and **Add to Goonwall** in the right-click menu everywhere, so you can send a page over instead of copying its address. See [From the browser](#from-the-browser). | Optional. It doesn't install itself — see [How to install the plugin](#how-to-install-the-plugin). |
+
+So: just want to play your folders or search a site? `Goonwall.exe` is
+enough. Want to hand pages over from the browser? Put all three in one folder
+and follow [How to install the plugin](#how-to-install-the-plugin).
+
 ---
 
 ## First start
@@ -182,73 +201,10 @@ marked are already there.
 
 It keeps to its corner, clear of the page's own controls.
 
-This needs a small browser extension, and you install it by hand — it doesn't
-come from the Chrome Web Store. Takes a minute, once.
-
-#### Installing it
-
-1. **Start Goonwall once**, if you never have. That's what tells the browser
-   where to find the little helper program that carries the address over.
-   Nothing to click, it happens on every start. Skip it and everything else
-   looks right while nothing works.
-2. **Find the `extension` folder.** It sits next to `Goonwall.exe`. Leave it
-   there: Chrome doesn't copy it, it reads it where it lies, so moving or
-   deleting the folder later takes the extension with it.
-3. **Open `chrome://extensions`.** Type or paste that into the address bar.
-4. **Switch on *Developer mode*** with the toggle in the top right. Three
-   buttons show up above the list.
-5. **Click *Load unpacked*** and pick the `extension` folder from step 2 —
-   the folder itself, not a file inside it.
-
-A card called **Add to Goonwall** appears in the list. That's it, there's
-nothing to configure.
-
-Its **Site access** names the seven sites and nothing else. That's where the
-button gets drawn, and it's the only reason the extension needs to be allowed
-anywhere at all — more on that below.
-
-#### Checking that it worked
-
-Open one of the seven sites and click the round button in the bottom right —
-or right-click any page at all and pick **Add to Goonwall**. Either way a
-small note shows up in the top right corner for a moment:
-
-| | |
-|---|---|
-| **ADDED TO GOONWALL**, green | The address arrived. Switch over and it's in the playlist; if Goonwall is closed, it'll be there at the next start. |
-| A red line | It didn't, and the note says why — usually that Goonwall has never been started on this PC, which is step 1. |
-
-The same mark shows on the extension's icon, which is what you get on the
-handful of pages no extension may write on: `chrome://` pages, the Web Store,
-a PDF. There the note stays away and only the icon says anything, so it's
-worth pinning — click the puzzle-piece button in the toolbar, then the pin
-next to **Add to Goonwall**.
-
-**Edge works exactly the same way**, at `edge://extensions`.
-
-#### Removing it
-
-**Remove** on its card in `chrome://extensions`. Nothing stays behind in the
-browser, and Goonwall keeps working as before.
-
-#### What it can and can't do
-
-- **It's allowed on seven sites, and only because of the button.** Drawing
-  something on a page means running there, and running there is a permission
-  — so it names those seven and no others. On every other site on the web it
-  can do nothing at all until you right-click, and what it may do then lasts
-  for that one click, in that one tab.
-- **It only ever sends an address**, the one the browser was already showing.
-  It doesn't read the page, and the button doesn't even tell Goonwall which
-  page it's on — that comes from the tab itself.
-- **The note is the one thing it puts on a page**, for two seconds, in a
-  closed container of its own so the page can't reach into it.
-- **The link is looked up when it plays**, not when you click. So a page
-  Goonwall can't play is only reported later, when it tries — same as a
-  pasted link.
-- **Developer mode has to stay on**, and Chrome will ask about it once per
-  start. That's the price of an extension that doesn't come from the Web
-  Store.
+This needs the browser plugin and `GoonwallHost.exe` (see [What's in the
+download](#whats-in-the-download)), and you install the plugin by hand — it
+doesn't come from the Chrome Web Store. Takes a minute, once: see [How to
+install the plugin](#how-to-install-the-plugin).
 
 ---
 
@@ -538,6 +494,84 @@ you're in the MAX box.
 
 ---
 
+## How to install the plugin
+
+The browser plugin is what gives you the **GW** button and **Add to Goonwall**
+in the right-click menu — see [From the browser](#from-the-browser) for what
+they do. It's optional, it doesn't come from the Chrome Web Store, and you
+install it by hand. Takes a minute, once.
+
+You need all three pieces from [What's in the
+download](#whats-in-the-download): `Goonwall.exe`, `GoonwallHost.exe` and the
+plugin.
+
+1. **Put everything in one folder** where it can stay — `Goonwall.exe` and
+   `GoonwallHost.exe` side by side. If you downloaded
+   `Goonwall-extension.zip`, unzip it there too, so you have an `extension`
+   folder next to the two exes. Chrome doesn't copy that folder, it reads it
+   where it lies, so moving or deleting it later takes the plugin with it.
+2. **Start Goonwall once.** That's what tells the browser where to find
+   `GoonwallHost.exe`, the helper that carries the address over. Nothing to
+   click, it happens on every start. Skip it and everything else looks right
+   while nothing works. Moved the folder later? Start Goonwall once more.
+3. **Open `chrome://extensions`.** Type or paste that into the address bar.
+4. **Switch on *Developer mode*** with the toggle in the top right. Three
+   buttons show up above the list.
+5. **Click *Load unpacked*** and pick the `extension` folder from step 1 —
+   the folder itself, not a file inside it.
+
+A card called **Add to Goonwall** appears in the list. That's it, there's
+nothing to configure.
+
+Its **Site access** names the seven sites and nothing else. That's where the
+button gets drawn, and it's the only reason the plugin needs to be allowed
+anywhere at all — more on that below.
+
+**Edge works exactly the same way**, at `edge://extensions`.
+
+### Checking that it worked
+
+Open one of the seven sites and click the round button in the bottom right —
+or right-click any page at all and pick **Add to Goonwall**. Either way a
+small note shows up in the top right corner for a moment:
+
+| | |
+|---|---|
+| **ADDED TO GOONWALL**, green | The address arrived. Switch over and it's in the playlist; if Goonwall is closed, it'll be there at the next start. |
+| A red line | It didn't, and the note says why — usually that Goonwall has never been started on this PC, which is step 2, or that `GoonwallHost.exe` isn't next to `Goonwall.exe`, which is step 1. |
+
+The same mark shows on the plugin's icon, which is what you get on the
+handful of pages no extension may write on: `chrome://` pages, the Web Store,
+a PDF. There the note stays away and only the icon says anything, so it's
+worth pinning — click the puzzle-piece button in the toolbar, then the pin
+next to **Add to Goonwall**.
+
+### Removing it
+
+**Remove** on its card in `chrome://extensions`. Nothing stays behind in the
+browser, and Goonwall keeps working as before.
+
+### What it can and can't do
+
+- **It's allowed on seven sites, and only because of the button.** Drawing
+  something on a page means running there, and running there is a permission
+  — so it names those seven and no others. On every other site on the web it
+  can do nothing at all until you right-click, and what it may do then lasts
+  for that one click, in that one tab.
+- **It only ever sends an address**, the one the browser was already showing.
+  It doesn't read the page, and the button doesn't even tell Goonwall which
+  page it's on — that comes from the tab itself.
+- **The note is the one thing it puts on a page**, for two seconds, in a
+  closed container of its own so the page can't reach into it.
+- **The link is looked up when it plays**, not when you click. So a page
+  Goonwall can't play is only reported later, when it tries — same as a
+  pasted link.
+- **Developer mode has to stay on**, and Chrome will ask about it once per
+  start. That's the price of an extension that doesn't come from the Web
+  Store.
+
+---
+
 ## What's remembered, and where
 
 Goonwall keeps a little of its own data in `%APPDATA%\Goonwall` — paste that
@@ -628,7 +662,7 @@ picker — that's the file dialog, not Goonwall.
 | **A linked video is listed but stays black** | Every version the site offers was refused. Try the page in a browser: if it won't play there either, there's nothing to be done from here. |
 | **Website videos stop after a few tiles** | Several failed to open in a row, so Goonwall stopped trying. Load the source again once your connection is back. |
 | **A website video is slow to start** | It streams from the site, so a second or two is normal. Many at once share your connection. |
-| **"Add to Goonwall" says Goonwall didn't answer** | Chrome doesn't know where the helper is. Start Goonwall once — every start sorts it out — and try again. Same thing after moving the program somewhere else, since it registers itself by its own location. |
+| **"Add to Goonwall" says Goonwall didn't answer** | Chrome doesn't know where the helper is. Start Goonwall once — every start sorts it out — and try again. Same thing after moving the program somewhere else, since it registers itself by its own location. Also check that `GoonwallHost.exe` sits next to `Goonwall.exe` — see [How to install the plugin](#how-to-install-the-plugin). |
 | **A page added from the browser isn't in the playlist** | It gets added when Goonwall next looks, which is at startup and whenever you switch back to its window. Click the window once. A page you added several times is only added once. |
 | **The window opens off-screen** | It only restores onto a monitor that still exists, but if it's ever stuck, delete `%APPDATA%\Goonwall\settings.dat`. |
 | **The panic key does nothing while another program is in front** | Another program holds that key, and Goonwall said so when it started. Pick a different one under **Options → Panic key**. |
