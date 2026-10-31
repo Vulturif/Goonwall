@@ -1,9 +1,12 @@
 # Goonwall
 
 A video player for Windows. Point it at a folder and every video in it — and
-in every subfolder — becomes one playlist. You can play up to nine at once in
-a grid, cap how long each one plays, shuffle without repeats, and save
-playlists that pick up where they stopped.
+in every subfolder — becomes one playlist. Or skip the folder: search seven
+adult sites from inside Goonwall, or paste a link from almost any other, and
+their videos play straight from the site, nothing downloaded. Folders and
+sites mix in one playlist. You can play up to nine at once in a grid, cap how
+long each one plays, shuffle without repeats, save playlists that pick up
+where they stopped, and run a timed session in fullscreen.
 
 The decoders come with it, so there's nothing else to install and no codec
 pack to hunt down.
@@ -38,8 +41,14 @@ code-signed, not because anything is wrong with it: click **More info → Run
 anyway**. The single-file version unpacks itself on every start, so give it a
 few seconds to show up. After that it runs at full speed.
 
-Then hit **Choose folder…** and pick where your videos are. Next time you
-start, that folder is already open.
+It asks one question, once: whether it may send anonymous usage statistics.
+No is a fine answer — see [Usage statistics](#usage-statistics) for what yes
+means.
+
+Then hit **Choose folder…** and pick where your videos are — or
+**Website…** to search a site or paste a link instead (see
+[Websites](#websites)). Next time you start, whatever you loaded is already
+open.
 
 Want a different folder right away? Drag it onto `Goonwall.exe`.
 
@@ -54,28 +63,29 @@ Want a different folder right away? Drag it onto `Goonwall.exe`.
 | 1 | **Playlist toggle** | Hides the playlist panel so the video gets the whole window, and brings it back (`Ctrl+L`). |
 | 2 | **Choose folder…** | Replaces the playlist with one folder and everything under it (`Ctrl+O`). To *add* folders or single files instead, drag them onto the window. |
 | 3 | **Website…** | Plays a site's search instead of a folder, or a link you paste (`Ctrl+W`). See [Websites](#websites). |
-| 4 | **Sources** | What's loaded: a folder path, a search, a link, or just a count if there are several. Loaded a saved playlist? Its name comes first. Hover for the full list. |
-| 5 | **Playlists** | Save what's loaded under a name, or load one back (`Ctrl+P`). See [Saved playlists](#saved-playlists). |
-| 6 | **Favorites** | The videos you kept — play one again, or load the whole list (`Ctrl+B`). The number is how many. See [Favorites](#favorites). |
-| 7 | **Ignored** | The videos you told it to skip, and the way to get them back (`Ctrl+I`). The number is how many. |
-| 8 | **Options** | The settings you make once and then forget. See [Options](#options). |
-| 9 | **Filter** | Narrows the playlist by name. Whatever it hides is also out of next, previous and shuffle. |
-| 10 | **Length** | Plays only videos of a length: under 5 minutes, 5–20, or over 10, 20 or 40. Hover a row to see its length. See [Length](#length). |
-| 11 | **Playlist** | What's loaded, as a tree with a count on each heading. Click or double-click a video to play it. Click a heading to fold it — that only tidies the view, nothing gets skipped. A star marks the ones you kept, and a right-click on any row keeps it or lets it go. The right-click also has **Remove from playlist** — on a heading it takes the whole folder (`Del` does the same for the highlighted row). That only tidies what's loaded now: nothing is remembered, and the next scan brings them back. To keep one out for good, ignore it. `Ctrl+Z` undoes the last removal. |
-| 12 | **Video** | Double-click for fullscreen. |
-| 13 | **Now playing** | The full path of what's playing, or its title if it isn't a file. While the speed isn't normal, it says so first, like `1.5×`. |
-| 14 | **Seek bar** | Click or drag to jump. Elapsed on the left, remaining on the right. An A-B loop shows as an amber stretch on it — see [Looping a stretch](#looping-a-stretch). |
-| 15 | **Shuffle** | Random order, no repeats. Videos you haven't seen come first, then the ones you saw longest ago (`S`). |
-| 16 | **Endless** | After the last video, start over from the top — or with a fresh shuffle round (`R`). Off by default, so playback just stops at the end. With a website loaded, it first asks the site for more — see [Websites](#websites). |
-| 17 | **Favorites only** | Plays only the videos you kept out of whatever is loaded. The rest stay in the list and come back when you switch it off. See [Favorites](#favorites). |
-| 18 | **Unseen only** | Plays only the videos that have never played before (`U`). See [Unseen only](#unseen-only). |
-| 19 | **Previous · Play/Pause · Stop · Next** | `P`, `Space`, –, `N`. With several videos on screen, Play/Pause and Stop hit all of them. |
-| 20 | **GRID** | How many play at once, 1 to 9 (keys `1`–`9`). See [Several videos at once](#several-videos-at-once). |
-| 21 | **MAX** | Cap per video, in seconds or minutes. `full` plays each one to the end. See [Max play time](#max-play-time). |
-| 22 | **Favorite** | Keeps this video (`B`). The star is filled while what's on screen is one of them. See [Favorites](#favorites). |
-| 23 | **Ignore** | Takes this video out of the playlist and keeps it out of future scans (`X`). Nothing is deleted from disk. `Ctrl+Z` undoes the last one. |
-| 24 | **Mute · Volume** | `M` mutes. Moving the slider up from 0 unmutes. |
-| 25 | **Fullscreen** | `F` or `F11`. `Esc` gets you out. |
+| 4 | **Session…** | Plays one playlist fullscreen for a set time, with settings of its own, then stops by itself (`Ctrl+T`). See [Sessions](#sessions). |
+| 5 | **Sources** | What's loaded: a folder path, a search, a link, or just a count if there are several. Loaded a saved playlist? Its name comes first. Hover for the full list. |
+| 6 | **Playlists** | Save what's loaded under a name, or load one back (`Ctrl+P`). See [Saved playlists](#saved-playlists). |
+| 7 | **Favorites** | The videos you kept — play one again, or load the whole list (`Ctrl+B`). The number is how many. See [Favorites](#favorites). |
+| 8 | **Ignored** | The videos you told it to skip, and the way to get them back (`Ctrl+I`). The number is how many. |
+| 9 | **Options** | The settings you make once and then forget. See [Options](#options). |
+| 10 | **Filter** | Narrows the playlist by name. Whatever it hides is also out of next, previous and shuffle. |
+| 11 | **Length** | Plays only videos of a length: under 5 minutes, 5–20, or over 10, 20 or 40. Hover a row to see its length. See [Length](#length). |
+| 12 | **Playlist** | What's loaded, as a tree with a count on each heading. Click or double-click a video to play it. Click a heading to fold it — that only tidies the view, nothing gets skipped. A star marks the ones you kept, and a right-click on any row keeps it or lets it go. The right-click also has **Remove from playlist** — on a heading it takes the whole folder (`Del` does the same for the highlighted row). That only tidies what's loaded now: nothing is remembered, and the next scan brings them back. To keep one out for good, ignore it. `Ctrl+Z` undoes the last removal. |
+| 13 | **Video** | Double-click for fullscreen. |
+| 14 | **Now playing** | The full path of what's playing, or its title if it isn't a file. While the speed isn't normal, it says so first, like `1.5×`. |
+| 15 | **Seek bar** | Click or drag to jump. Elapsed on the left, remaining on the right. An A-B loop shows as an amber stretch on it — see [Looping a stretch](#looping-a-stretch). |
+| 16 | **Shuffle** | Random order, no repeats. Videos you haven't seen come first, then the ones you saw longest ago (`S`). |
+| 17 | **Endless** | After the last video, start over from the top — or with a fresh shuffle round (`R`). Off by default, so playback just stops at the end. With a website loaded, it first asks the site for more — see [Websites](#websites). |
+| 18 | **Favorites only** | Plays only the videos you kept out of whatever is loaded. The rest stay in the list and come back when you switch it off. See [Favorites](#favorites). |
+| 19 | **Unseen only** | Plays only the videos that have never played before (`U`). See [Unseen only](#unseen-only). |
+| 20 | **Previous · Play/Pause · Stop · Next** | `P`, `Space`, –, `N`. With several videos on screen, Play/Pause and Stop hit all of them. |
+| 21 | **GRID** | How many play at once, 1 to 9 (keys `1`–`9`). See [Several videos at once](#several-videos-at-once). |
+| 22 | **MAX** | Cap per video, in seconds or minutes. `full` plays each one to the end. See [Max play time](#max-play-time). |
+| 23 | **Favorite** | Keeps this video (`B`). The star is filled while what's on screen is one of them. See [Favorites](#favorites). |
+| 24 | **Ignore** | Takes this video out of the playlist and keeps it out of future scans (`X`). Nothing is deleted from disk. `Ctrl+Z` undoes the last one. |
+| 25 | **Mute · Volume** | `M` mutes. Moving the slider up from 0 unmutes. |
+| 26 | **Fullscreen** | `F` or `F11`. `Esc` gets you out. |
 
 ### While you wait
 
@@ -437,9 +447,66 @@ The **Options** button in the header holds what you set once and then leave:
 | **Sound moves on** | Hands the sound to the next video every so often, see [Several videos at once](#several-videos-at-once). |
 | **Endless asks sites for more** | On by default. See [Websites](#websites). |
 | **Length filter hides unknown lengths** | Off by default. See [Length](#length). |
+| **Look for updates at start** | On by default. See [Updates](#updates). |
+| **Send anonymous usage statistics** | Off unless you said yes when Goonwall asked. See [Usage statistics](#usage-statistics). |
 | **Offline folder…** | Where favorites saved offline go. Copies already made stay where they are. |
+| **Check for updates** | Asks right away whether there's a newer version, and says so either way. |
 
 All of them are remembered.
+
+---
+
+## Updates
+
+Each time it starts, Goonwall asks GitHub whether a newer version is out. If
+there is one, it tells you what changed and how big the download is, and
+asks:
+
+| | |
+|---|---|
+| **Update now** | Downloads it, then restarts into the new version. What was loaded comes back, the same as after any restart. |
+| **On next start** | Downloads it in the background while you carry on; the new version is what starts next time. |
+| **Skip this version** | Never asks about this version again. The next one does ask. |
+
+Closing the question without an answer skips nothing — it asks again next
+time. Nothing is downloaded until you pick one of the first two.
+
+The update replaces `Goonwall.exe` where it is, under whatever name it has,
+and `GoonwallHost.exe` next to it. The browser plugin can't be updated this
+way, because Chrome reads it from the folder you loaded it from: when a
+release changes it, its notes say so, and you replace that folder and click
+the reload arrow on `chrome://extensions`.
+
+Don't want to be asked at all? Turn off **Options → Look for updates at
+start**; **Options → Check for updates** still works when you want it.
+
+---
+
+## Sessions
+
+![The session dialog](screenshots/session.png)
+
+A session is a playlist, the settings to play it with and how long, decided
+once: **Session…** (`Ctrl+T`) and **Start**, and it plays fullscreen until
+the time is up.
+
+| # | | |
+|---|---|---|
+| 1 | **Playlist** | The one that's loaded now, or one of your [saved playlists](#saved-playlists). A saved one is scanned afresh first, the same as loading it; the time only starts counting once the first video shows. |
+| 2 | **Videos** | How many play at once, like **GRID**. |
+| 3 | **Max play time** | Like **MAX** — `full` plays each video whole. |
+| 4 | **Duration** | From 1 minute to 12 hours. |
+| 5 | **Shuffle · Endless · Favorites only · Unseen only** | The same four switches as in the bar. Without **Endless**, a playlist that runs out before the time does simply stops. |
+
+Every video on screen starts over with a video of its own, playing. When the
+time is up, everything pauses and the window comes back. It ends sooner with
+the [panic key](#panic-key), or when you leave fullscreen yourself (`Esc` or
+`F`) — then it keeps playing, without the timer.
+
+However it ends, your own shuffle, endless, grid and the rest are back as
+they were, and the playlist you played stays loaded. The volume and mute are
+never touched: they're yours either way. The dialog remembers the last
+session you set up, so the next one is a click.
 
 ---
 
@@ -483,6 +550,7 @@ mute from a panic is never remembered, so the next start isn't silent.
 | `Ctrl+W` | Add a website |
 | `Ctrl+L` | Show/hide the playlist |
 | `Ctrl+P` | Saved playlists |
+| `Ctrl+T` | Start a session |
 | `Ctrl+B` | Favorites |
 | `Ctrl+I` | Ignored videos |
 | `Ctrl+Shift+Space` | Panic: hide everything, or bring it back paused — works from any program |
@@ -583,6 +651,7 @@ into the Explorer address bar to find it:
 - **The play history** — what shuffle and unseen only use.
 - **Video lengths** learned along the way, for the length filter.
 - **Saved playlists**, with their resume points.
+- **The last session you set up**, for the session dialog to open on.
 - **Favorites saved offline**, in the `offline` folder unless you picked
   another one — the only video files Goonwall ever writes.
 - **Pages marked in the browser** that haven't been picked up yet — see *From
@@ -619,8 +688,34 @@ Goonwall just starts fresh. The one way across is **Export…** in the
 favorites dialog, and what that writes is deliberately *not* encrypted — see
 [Favorites](#favorites).
 
-Goonwall has no update check and no telemetry, and it never sends your data
-anywhere. With only folders loaded it makes no network connections at all.
+Goonwall never sends your data anywhere. With only folders loaded, the one
+connection it makes is the [update check](#updates) at start: a single
+question to GitHub about the latest version number. GitHub sees your IP
+address and which version you're running, and nothing else — not a folder,
+not a video. Turn off **Options → Look for updates at start** and it makes
+none at all — unless you said yes to usage statistics, below.
+
+### Usage statistics
+
+The first time it starts, Goonwall asks once whether it may send **anonymous
+usage statistics**. Closing the question counts as no, and it never asks
+again; **Options → Send anonymous usage statistics** changes your answer any
+time, and turning it off throws away whatever wasn't sent yet.
+
+With it on, every few minutes and when you quit, Goonwall sends
+**vulturif.com** a few counts: how often each feature was used — the grid
+size, fullscreen, shuffle, a favorite kept, a video ignored, a session started — how many
+minutes something was playing, and how often each website did or didn't hand
+over a video. Plus the Goonwall version and "Windows 10" or "Windows 11".
+The site adds them up per day and keeps nothing else, not even the address
+they came from.
+
+What is **never** sent: a video, its title or its address, a folder or a
+file name, a search, a pasted link or its site, your favorites, your history,
+or anything that tells you or this PC apart from anyone else's — there is no
+account and no ID. A link counts as "a link", nothing more. The only thing
+Goonwall writes down for this is today's date, in its own settings, so a day
+is counted once.
 
 A website source — a search or a pasted link — is the exception, and only
 while you're using it. Goonwall then talks to that site the way a browser
@@ -669,4 +764,4 @@ picker — that's the file dialog, not Goonwall.
 | **Goonwall vanished** | The panic key hid it. Press it again, or click the Goonwall icon in the tray. |
 | **The length filter shows videos of the wrong length** | It keeps videos whose length isn't known yet — hover it to see how many. **Options → Length filter hides unknown lengths** hides them. |
 | **"…is only streamed in pieces (HLS)"** | That site's videos can't be saved offline. It still plays from the site. |
-| **Everything should start over** | Delete `%APPDATA%\Goonwall`. |
+| **An update failed** | Nothing was replaced — the version you have keeps working, and it asks again next start. If it keeps failing, download the new `Goonwall.exe` and `GoonwallHost.exe` from the [releases page](https://github.com/Vulturif/Goonwall/releases) and put them over the old ones. || **Everything should start over** | Delete `%APPDATA%\Goonwall`. |
