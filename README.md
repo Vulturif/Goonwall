@@ -458,7 +458,7 @@ All of them are remembered.
 
 ## Updates
 
-Each time it starts, Goonwall asks GitHub whether a newer version is out. If
+Each time it starts, Goonwall asks vulturif.com whether a newer version is out. If
 there is one, it tells you what changed and how big the download is, and
 asks:
 
@@ -690,10 +690,11 @@ favorites dialog, and what that writes is deliberately *not* encrypted — see
 
 Goonwall never sends your data anywhere. With only folders loaded, the one
 connection it makes is the [update check](#updates) at start: a single
-question to GitHub about the latest version number. GitHub sees your IP
-address and which version you're running, and nothing else — not a folder,
+question to vulturif.com about the latest version number. The site sees your
+IP address and which version you're running, and nothing else — not a folder,
 not a video. Turn off **Options → Look for updates at start** and it makes
-none at all — unless you said yes to usage statistics, below.
+none at all — unless you said yes to usage statistics, below, or send an
+[error report](#error-reports).
 
 ### Usage statistics
 
@@ -734,6 +735,24 @@ rather than off your disk. Nothing is sent about you, your folders, or what
 else is in your playlist, and nothing is downloaded or kept unless you save a
 favorite offline.
 
+### Error reports
+
+When something goes wrong, **Options → Send error report…** lets you tell the
+developer about it. You write what happened, and can add an email address or
+Discord name if you'd like an answer. Nothing is sent until you press
+**Send**.
+
+Goonwall also offers the last few errors it ran into since it started, as
+technical details. The dialog shows that text in full before anything goes,
+with your user folder already replaced by `~`. An error can still mention a
+video or a folder, though — untick **Include technical details** and only
+your own words are sent. Those errors are only ever kept in memory and are
+gone when Goonwall quits.
+
+A report always carries the Goonwall version and "Windows 10" or "Windows
+11". vulturif.com keeps the report itself and nothing about where it came
+from.
+
 To learn how long your video files are, Goonwall asks Windows — the same
 number Explorer shows in its Length column. Nothing leaves your PC for that.
 
@@ -764,4 +783,6 @@ picker — that's the file dialog, not Goonwall.
 | **Goonwall vanished** | The panic key hid it. Press it again, or click the Goonwall icon in the tray. |
 | **The length filter shows videos of the wrong length** | It keeps videos whose length isn't known yet — hover it to see how many. **Options → Length filter hides unknown lengths** hides them. |
 | **"…is only streamed in pieces (HLS)"** | That site's videos can't be saved offline. It still plays from the site. |
-| **An update failed** | Nothing was replaced — the version you have keeps working, and it asks again next start. If it keeps failing, download the new `Goonwall.exe` and `GoonwallHost.exe` from the [releases page](https://github.com/Vulturif/Goonwall/releases) and put them over the old ones. || **Everything should start over** | Delete `%APPDATA%\Goonwall`. |
+| **An update failed** | Nothing was replaced — the version you have keeps working, and it asks again next start. If it keeps failing, download the new `Goonwall.exe` and `GoonwallHost.exe` from [vulturif.com](https://vulturif.com/p/goonwall/) and put them over the old ones. |
+| **Something else broke** | **Options → Send error report…** — see [Error reports](#error-reports). |
+| **Everything should start over** | Delete `%APPDATA%\Goonwall`. |
