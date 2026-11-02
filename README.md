@@ -224,7 +224,7 @@ install the plugin](#how-to-install-the-plugin).
 
 | # | | |
 |---|---|---|
-| 1 | **Active video** | The one with the cyan frame. Click any video to make it the active one. Only it has sound, and the seek bar, title, next/previous and ignore all apply to it. |
+| 1 | **Active video** | The one with the cyan frame. Click any video to make it the active one. It has the sound, and the seek bar, title, next/previous and ignore all apply to it. |
 | 2 | **Other videos** | Each one moves on to its own next video when it finishes. The same video never plays in two places at once. |
 | 3 | **Now playing** | `[2/4]` means the second of four is active. |
 | 4 | **GRID** | 1–9 videos. Rows stay as square as they can, and a shorter last row is centred: 3 = 2 + 1, 5 = 3 + 2. Fewer videos than places and the rest stay black. |
@@ -233,13 +233,15 @@ install the plugin](#how-to-install-the-plugin).
 Decoding several high-resolution videos at once is real work for your GPU and
 CPU. If playback stutters, use a smaller grid.
 
-Three things you can do with one video in the grid:
+What you can do with one video in the grid, and with where the sound goes:
 
 | | |
 |---|---|
-| **Hold it** (`H`) | The active video plays again when it ends, instead of moving on, while the others carry on through the list. A held video has a dashed amber frame. `H` again lets it go, and so does picking another video for it (`N`, `P`, `X` or a click in the playlist). |
+| **Lock it** (the padlock, or `H`) | Point at a video and a padlock appears in its top right corner; click it to lock that video in its place. A locked video plays again whenever it ends (or its max play time runs out), while the others carry on through the list. Nothing replaces it: next and previous, a click in the playlist and ignoring are refused while it's the active one, removing its row leaves it in, and loading another playlist or folder keeps it playing and adds it to the new list. A smaller grid gives up unlocked places first. A locked video has an orange frame (dashed over the cyan when it's also the active one) and its padlock always shows. Click the padlock again, or press `H` on it, to let it go. `H` locks or unlocks the active video. |
 | **Make it big** (`Z`, or a middle click on it) | That video alone fills the grid. The others keep playing out of sight, silently, so they're where they'd be anyway when you come back. `Z` again, or a new grid size, brings them back. Double-click is still fullscreen, so the two combine. |
-| **Let the sound move on** | Under **Options → Sound moves on**, the sound passes to the next video every 10, 20, 30 or 60 seconds. Clicking a video starts the count again. It rests while a video is big. |
+| **Hear it as well, or quiet it** (the speaker, or `Ctrl`+click) | Point at a video and a speaker appears beside its padlock. On any video but the active one, click it, or `Ctrl`+click the video, and that video is heard alongside the active one, gets a magenta frame and keeps its speaker showing. On the active video the speaker is cyan and quiets that one; its speaker then stays, crossed out, until you click it again — or until another video gets the sound, after which clicking this one gives it the sound as usual. Do it to as many as you like — the sounds simply play on top of each other. The controls stay with the active video. Click the speaker or `Ctrl`+click it again to quiet it; `M` mutes them all. It stays with that place in the grid when a new video comes into it. While one video is big, only that one is heard. |
+| **Let the sound move on** | Under **Options → Sound moves on**, the sound passes to the next video every 10, 20, 30 or 60 seconds. Clicking a video starts the count again. It rests while a video is big, and skips a video you're hearing as well anyway. |
+| **Let the sound follow the action** | **Options → Sound moves on → To the loudest** gives the sound to whichever video is louder than *it usually is*, not simply the loudest one, so a video that is loud all the way through doesn't keep it. It has to stay ahead for a moment before the sound moves, and then the sound stays put for a few seconds, so it doesn't jump at every bang. A video needs a few seconds of playing before it can win, and a paused one can't. After you click a video, the sound stays there for 15 seconds. |
 
 ---
 
@@ -257,6 +259,41 @@ Moving the mouse on another monitor won't bring them back — only movement
 over the video itself does.
 
 Every keyboard shortcut works in fullscreen too.
+
+### On another monitor
+
+`Shift+F` puts the fullscreen picture on the next monitor, and once more on
+the one after that, round to the first again. Goonwall remembers where you
+put it: from then on `F` opens fullscreen there, for as long as that monitor
+is plugged in. Moving it back to the window's own monitor makes `F` follow
+the window again.
+
+With the picture on a TV or a second screen, the window stays where it was
+and can be used as ever — the playlist, the buttons, typing in the filter.
+The controls go where the mouse goes: over the picture they float on it,
+over the window they're back in their usual place, and where the videos
+were, the window says which monitor they're on. `Esc` brings them back.
+
+### Every monitor at once
+
+`A` gives every other monitor a grid of videos of its own, fullscreen, and
+keeps the window where it is — or, with the window's own videos fullscreen
+on another monitor, covers the window's monitor too. Each monitor has its
+own number of videos: click a video on one and `1`…`9` (or **GRID**) set
+how many play *there*. Goonwall remembers that number per monitor, so a
+TV that always shows one big video keeps showing one.
+
+No video plays on two monitors at once, and everything else works across
+all of them: the sound goes to the video you clicked, wherever it is,
+`Ctrl+click` hears more than one, and `Z` makes a video big on its own
+monitor without touching the others. The controls follow the mouse onto
+whichever monitor it's on. `F` still takes the window's videos fullscreen
+and back; if the other grid was on that monitor, it moves out of the way
+and keeps playing.
+
+`A` again, or `Esc`, goes back to one monitor. Unplugging a monitor takes
+its grid with it; plugging one in leaves it alone until you press `A` twice.
+`Shift+F` doesn't move anything while every monitor has its grid.
 
 ---
 
@@ -444,7 +481,7 @@ The **Options** button in the header holds what you set once and then leave:
 | **Discreet window** | The window title says only "Goonwall", never the video's name — that title is also what the taskbar, Alt+Tab and screen-sharing pickers show. The taskbar preview and Alt+Tab show the app icon instead of the video. |
 | **Panic key** | Which key hides everything: see [Panic key](#panic-key). |
 | **MAX starts** | Where a long video's stretch begins, see [Max play time](#max-play-time). |
-| **Sound moves on** | Hands the sound to the next video every so often, see [Several videos at once](#several-videos-at-once). |
+| **Sound moves on** | Hands the sound to the next video every so often, or to the one that's louder than it usually is. See [Several videos at once](#several-videos-at-once). |
 | **Endless asks sites for more** | On by default. See [Websites](#websites). |
 | **Length filter hides unknown lengths** | Off by default. See [Length](#length). |
 | **Look for updates at start** | On by default. See [Updates](#updates). |
@@ -536,9 +573,9 @@ mute from a panic is never remembered, so the next start isn't silent.
 | `S` | Shuffle on/off |
 | `R` | Endless on/off |
 | `U` | Unseen only on/off |
-| `1` … `9` | How many videos on screen |
+| `1` … `9` | How many videos on screen (on the clicked video's monitor) |
 | `+` / `-` | Faster / slower (all videos) |
-| `H` | Hold the active video: it plays again instead of moving on |
+| `H` | Lock the active video in its place, or unlock it |
 | `Z` | The active video alone, big; again for the grid |
 | `L` | Loop: start, end, off |
 | `B` | Keep the current video, or let it go |
@@ -546,6 +583,8 @@ mute from a panic is never remembered, so the next start isn't silent.
 | `Del` | Remove the highlighted row (or folder) from the playlist |
 | `Ctrl+Z` | Undo the last ignore or removal |
 | `F` / `F11` | Fullscreen; `Esc` leaves |
+| `Shift+F` | Fullscreen on the next monitor |
+| `A` | A grid on every monitor; again for one |
 | `Ctrl+O` | Choose a folder |
 | `Ctrl+W` | Add a website |
 | `Ctrl+L` | Show/hide the playlist |
@@ -657,8 +696,9 @@ into the Explorer address bar to find it:
 - **Pages marked in the browser** that haven't been picked up yet — see *From
   the browser*. They leave the moment they go into the playlist.
 - **Your settings** — shuffle, endless, favorites only, unseen only, max play
-  time, grid, volume, mute, everything under Options, the playlist panel and
-  the window size — plus what was loaded, so the next start carries on where
+  time, grid, volume, mute, the monitor fullscreen opens on and how many
+  videos each other monitor showed, everything under Options, the playlist panel and the window size — plus what was
+  loaded, so the next start carries on where
   you left off.
 
 What it stores about a website is the *question*: the site, the search and the
