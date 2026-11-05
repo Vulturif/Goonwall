@@ -80,12 +80,13 @@ Want a different folder right away? Drag it onto `Goonwall.exe`.
 | 18 | **Favorites only** | Plays only the videos you kept out of whatever is loaded. The rest stay in the list and come back when you switch it off. See [Favorites](#favorites). |
 | 19 | **Unseen only** | Plays only the videos that have never played before (`U`). See [Unseen only](#unseen-only). |
 | 20 | **Previous · Play/Pause · Stop · Next** | `P`, `Space`, –, `N`. With several videos on screen, Play/Pause and Stop hit all of them. |
-| 21 | **GRID** | How many play at once, 1 to 9 (keys `1`–`9`). See [Several videos at once](#several-videos-at-once). |
-| 22 | **MAX** | Cap per video, in seconds or minutes. `full` plays each one to the end. See [Max play time](#max-play-time). |
-| 23 | **Favorite** | Keeps this video (`B`). The star is filled while what's on screen is one of them. See [Favorites](#favorites). |
-| 24 | **Ignore** | Takes this video out of the playlist and keeps it out of future scans (`X`). Nothing is deleted from disk. `Ctrl+Z` undoes the last one. |
-| 25 | **Mute · Volume** | `M` mutes. Moving the slider up from 0 unmutes. |
-| 26 | **Fullscreen** | `F` or `F11`. `Esc` gets you out. |
+| 21 | **All monitors** | A grid of videos on every monitor (`A`). With a second monitor connected, **GRID** then sets the clicked monitor's count. See [Every monitor at once](#every-monitor-at-once). |
+| 22 | **GRID** | How many play at once, 1 to 9 (keys `1`–`9`). See [Several videos at once](#several-videos-at-once). |
+| 23 | **MAX** | Cap per video, in seconds or minutes. `full` plays each one to the end. See [Max play time](#max-play-time). |
+| 24 | **Favorite** | Keeps this video (`B`). The star is filled while what's on screen is one of them. See [Favorites](#favorites). |
+| 25 | **Ignore** | Takes this video out of the playlist and keeps it out of future scans (`X`). Nothing is deleted from disk. `Ctrl+Z` undoes the last one. |
+| 26 | **Mute · Volume** | `M` mutes. Moving the slider up from 0 unmutes. |
+| 27 | **Fullscreen** | `F` or `F11`. `Esc` gets you out. |
 
 ### While you wait
 
@@ -276,7 +277,8 @@ were, the window says which monitor they're on. `Esc` brings them back.
 
 ### Every monitor at once
 
-`A` gives every other monitor a grid of videos of its own, fullscreen, and
+`A`, or the all-monitors button in the controls, gives every other monitor
+a grid of videos of its own, fullscreen, and
 keeps the window where it is — or, with the window's own videos fullscreen
 on another monitor, covers the window's monitor too. Each monitor has its
 own number of videos: click a video on one and `1`…`9` (or **GRID**) set
