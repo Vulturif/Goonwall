@@ -234,13 +234,16 @@ install the plugin](#how-to-install-the-plugin).
 Decoding several high-resolution videos at once is real work for your GPU and
 CPU. If playback stutters, use a smaller grid.
 
-What you can do with one video in the grid, and with where the sound goes:
+What you can do with one video in the grid, and with where the sound goes.
+Right-clicking a video offers its lock, its sound and popping it out as a
+menu, too:
 
 | | |
 |---|---|
 | **Lock it** (the padlock, or `H`) | Point at a video and a padlock appears in its top right corner; click it to lock that video in its place. A locked video plays again whenever it ends (or its max play time runs out), while the others carry on through the list. Nothing replaces it: next and previous, a click in the playlist and ignoring are refused while it's the active one, removing its row leaves it in, and loading another playlist or folder keeps it playing and adds it to the new list. A smaller grid gives up unlocked places first. A locked video has an orange frame (dashed over the cyan when it's also the active one) and its padlock always shows. Click the padlock again, or press `H` on it, to let it go. `H` locks or unlocks the active video. |
 | **Make it big** (`Z`, or a middle click on it) | That video alone fills the grid. The others keep playing out of sight, silently, so they're where they'd be anyway when you come back. `Z` again, or a new grid size, brings them back. Double-click is still fullscreen, so the two combine. |
 | **Hear it as well, or quiet it** (the speaker, or `Ctrl`+click) | Point at a video and a speaker appears beside its padlock. On any video but the active one, click it, or `Ctrl`+click the video, and that video is heard alongside the active one, gets a magenta frame and keeps its speaker showing. On the active video the speaker is cyan and quiets that one; its speaker then stays, crossed out, until you click it again — or until another video gets the sound, after which clicking this one gives it the sound as usual. Do it to as many as you like — the sounds simply play on top of each other. The controls stay with the active video. Click the speaker or `Ctrl`+click it again to quiet it; `M` mutes them all. It stays with that place in the grid when a new video comes into it. While one video is big, only that one is heard. |
+| **Pop it out** (the window button, `O`, or right-click → **Pop out**) | Point at a video and a third button appears, left of the speaker; click it and that video lifts out of the grid into a window of its own — no frame, no controls, just the picture, shaped like the video. It keeps playing without a hitch, keeps its lock and its sound, and moves on to the next video when it ends, like any place in the grid; the grid fills the place it left, so it still shows as many as you chose. Drag the picture to move the window, drag its edge to resize it, double-click it to fill its monitor and again to go back. Pop out as many as you like, up to nine. All the keys work in a pop-out, with `1`…`9` setting the main window's grid. The same button on a pop-out (it's an ✕ there), `O` on it, right-click → **Close pop-out** or `Alt+F4` closes it, and its video goes with it. Pop-outs aren't remembered: closing Goonwall, or the panic key, closes them. |
 | **Let the sound move on** | Under **Options → Sound moves on**, the sound passes to the next video every 10, 20, 30 or 60 seconds. Clicking a video starts the count again. It rests while a video is big, and skips a video you're hearing as well anyway. |
 | **Let the sound follow the action** | **Options → Sound moves on → To the loudest** gives the sound to whichever video is louder than *it usually is*, not simply the loudest one, so a video that is loud all the way through doesn't keep it. It has to stay ahead for a moment before the sound moves, and then the sound stays put for a few seconds, so it doesn't jump at every bang. A video needs a few seconds of playing before it can win, and a paused one can't. After you click a video, the sound stays there for 15 seconds. |
 
@@ -490,6 +493,8 @@ The **Options** button in the header holds what you set once and then leave:
 | **Send anonymous usage statistics** | Off unless you said yes when Goonwall asked. See [Usage statistics](#usage-statistics). |
 | **Offline folder…** | Where favorites saved offline go. Copies already made stay where they are. |
 | **Check for updates** | Asks right away whether there's a newer version, and says so either way. |
+| **Send error report…** | Tells the developer what went wrong. See [Error reports](#error-reports). |
+| **Support Goonwall on Ko-fi ↗** | Opens [ko-fi.com/vulturif](https://ko-fi.com/vulturif) in your browser. See [Support](#support). |
 
 All of them are remembered.
 
@@ -579,6 +584,7 @@ mute from a panic is never remembered, so the next start isn't silent.
 | `+` / `-` | Faster / slower (all videos) |
 | `H` | Lock the active video in its place, or unlock it |
 | `Z` | The active video alone, big; again for the grid |
+| `O` | The active video out into a window of its own; on a pop-out, close it |
 | `L` | Loop: start, end, off |
 | `B` | Keep the current video, or let it go |
 | `X` | Ignore the current video |
@@ -747,7 +753,7 @@ time, and turning it off throws away whatever wasn't sent yet.
 
 With it on, every few minutes and when you quit, Goonwall sends
 **vulturif.com** a few counts: how often each feature was used — the grid
-size, fullscreen, shuffle, a favorite kept, a video ignored, a session started — how many
+size, fullscreen, shuffle, a favorite kept, a video ignored, a session started, the Ko-fi link clicked — how many
 minutes something was playing, and how often each website did or didn't hand
 over a video. Plus the Goonwall version and "Windows 10" or "Windows 11".
 The site adds them up per day and keeps nothing else, not even the address
@@ -828,3 +834,15 @@ picker — that's the file dialog, not Goonwall.
 | **An update failed** | Nothing was replaced — the version you have keeps working, and it asks again next start. If it keeps failing, download the new `Goonwall.exe` and `GoonwallHost.exe` from [vulturif.com](https://vulturif.com/p/goonwall/) and put them over the old ones. |
 | **Something else broke** | **Options → Send error report…** — see [Error reports](#error-reports). |
 | **Everything should start over** | Delete `%APPDATA%\Goonwall`. |
+
+---
+
+## Support
+
+Goonwall is free, with no ads and no account. If it has been good to you, a
+coffee is always appreciated: [ko-fi.com/vulturif](https://ko-fi.com/vulturif).
+
+It's also under **Options → Support Goonwall on Ko-fi**, and a line in the
+update question links to it. Goonwall never asks on its own, and clicking it
+only opens the page in your browser — with usage statistics on, that the link
+was clicked is counted, nothing about what happens on Ko-fi.
